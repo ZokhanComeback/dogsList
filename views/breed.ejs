@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dog</title>
+    <link rel="stylesheet" href='/stylesheets/style.css'>
+</head>
+<body>
+  <% if (
+    !requestError &&
+    !breedError
+  ) { %>
+    <img src="<%=dog%>" alt="dog"/>
+  <% } else if (
+    !requestError &&
+    breedError
+  ) { %>
+    <p class="query-error">Breed not found</p>
+  <% } else{ %>
+    <p class="request-error">Request Error!</p>
+  <% } %>
+</body>
+</html>
